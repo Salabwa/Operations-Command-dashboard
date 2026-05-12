@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import {
@@ -54,7 +53,7 @@ export function AppShell({ children }: { children: ReactNode }) {
               const Icon = item.icon;
               const active = pathname === item.href || (pathname === "/" && item.href === "/dashboard");
               return (
-                <Link
+                <a
                   key={item.href}
                   href={item.href}
                   className={cn(
@@ -64,7 +63,7 @@ export function AppShell({ children }: { children: ReactNode }) {
                 >
                   <Icon className="h-4 w-4" />
                   {item.label}
-                </Link>
+                </a>
               );
             })}
           </nav>
