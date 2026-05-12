@@ -240,7 +240,7 @@ function renderCell(value: unknown, type?: FieldType) {
   if (type === "progress") {
     return (
       <div className="min-w-32 space-y-1">
-        <div className="text-xs font-medium">{value}%</div>
+        <div className="text-xs font-medium">{progressValue}%</div>
         <Progress value={Number(value)} />
       </div>
     );
