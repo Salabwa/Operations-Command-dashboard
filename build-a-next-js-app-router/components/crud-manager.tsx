@@ -238,10 +238,11 @@ function renderCell(value: unknown, type?: FieldType) {
   if (type === "status") return <StatusBadge value={String(value)} />;
   if (type === "currency") return <span className="font-medium">{currency(Number(value))}</span>;
   if (type === "progress") {
+    const progressValue = Number(value);
     return (
       <div className="min-w-32 space-y-1">
         <div className="text-xs font-medium">{progressValue}%</div>
-        <Progress value={Number(value)} />
+        <Progress value={progressValue} />
       </div>
     );
   }
