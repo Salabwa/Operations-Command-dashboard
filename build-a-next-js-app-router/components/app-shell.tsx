@@ -36,7 +36,7 @@ const navItems = [
   { href: "/proposals", label: "Proposals", icon: FileText },
   { href: "/reports", label: "Reports", icon: BarChart3 },
   { href: "/settings", label: "Settings", icon: Settings }
-];
+] as const;
 
 export function AppShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
