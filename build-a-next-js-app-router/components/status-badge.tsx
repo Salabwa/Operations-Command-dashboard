@@ -1,0 +1,52 @@
+import { Badge } from "@/components/ui/badge";
+
+const statusTones: Record<string, "neutral" | "blue" | "green" | "amber" | "red" | "teal"> = {
+  Active: "green",
+  Archived: "neutral",
+  Blocked: "red",
+  Cancelled: "red",
+  Completed: "teal",
+  Planning: "blue",
+  "On Hold": "amber",
+  Backlog: "neutral",
+  "In Progress": "blue",
+  Review: "amber",
+  Done: "green",
+  Draft: "neutral",
+  Drafting: "blue",
+  Idea: "neutral",
+  Scheduled: "amber",
+  Published: "green",
+  Submitted: "blue",
+  Approved: "green",
+  Paid: "teal",
+  Rejected: "red",
+  Forecast: "blue",
+  Invoiced: "amber",
+  Received: "green",
+  Overdue: "red",
+  Prospecting: "blue",
+  Negotiating: "amber",
+  Dormant: "neutral",
+  Closed: "teal",
+  Prototype: "blue",
+  Live: "green",
+  "Needs Review": "amber",
+  Paused: "neutral",
+  Retired: "red",
+  Excellent: "green",
+  Stable: "blue",
+  "At Risk": "red",
+  Research: "blue",
+  Writing: "amber",
+  Won: "green",
+  Lost: "red",
+  Critical: "red",
+  High: "amber",
+  Medium: "blue",
+  Low: "neutral"
+};
+
+export function StatusBadge({ value }: { value: string }) {
+  return <Badge tone={statusTones[value] ?? "neutral"}>{value}</Badge>;
+}
